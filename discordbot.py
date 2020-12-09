@@ -14,12 +14,19 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+async def help(ctx):
+    await ctx.send('/russia -> ロシア国歌\n/mahjong ->雀魂\n/textage -> textage譜面一覧')
     
 @bot.command()   
 async def russia(ctx):
     await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
 
+@bot.command()   
+async def mahjong(ctx):
+    await ctx.send('https://game.mahjongsoul.com/')
+
+@bot.command()   
+async def textage(ctx):
+    await ctx.send('https://textage.cc/score/index.html?a011B000')
 
 bot.run(token)
