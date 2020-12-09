@@ -17,6 +17,7 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
     
+@bot.command()   
 async def russia(ctx):
     await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
 
