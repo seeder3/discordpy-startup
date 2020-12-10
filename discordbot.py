@@ -14,7 +14,7 @@ async def greet():
 # bot起動時に実行されるイベントハンドラを定義
 @bot.event
 async def on_ready():
-    await greet() # 挨拶する非同期関数を実行
+    await greet()   # 挨拶する非同期関数を実行
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -41,14 +41,14 @@ async def mahjong(ctx):
 
 @bot.command()
 async def textage(ctx, arg):
-    code = [] # 各文字のutf-16文字コードを入れる配列
-    string = list(arg) # 文字を取得 
+    code = []   # 各文字のutf-16文字コードを入れる配列
+    string = list(arg)  # 文字を取得
 
     for i in range(len(string)):
         s = list((hex(ord(string[i]))))
         t = s[2:6]
         code.append(''.join(t))
-    await ctx.send('https://textage.cc/score/index.html?r211B000_'+(''.join(code)))
+    await ctx.send('https://textage.cc/score/index.html?r211B000_' + (''.join(code)))
 
 @bot.command()
 async def chimpo(ctx):
