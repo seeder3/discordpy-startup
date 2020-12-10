@@ -6,12 +6,6 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-# 任意のチャンネルで挨拶する非同期関数を定義
-async def greet():
-    channel = client.get_channel(784788831253037077)
-    await channel.send('Bot reload complete.')
-
-
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
