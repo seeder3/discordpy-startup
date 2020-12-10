@@ -28,14 +28,12 @@ async def on_command_error(ctx, error):
 async def command(ctx):
     await ctx.send('/russia -> ロシア国歌\n/mahjong ->雀魂\n/textage -> textage譜面一覧')
 
-        
-    
 @bot.command()   
 async def russia(ctx):
     a = random.random()
-    if (a < 0.03)
+    if (a < 0.03):
         await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
-    else
+    else:
         await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc') #3%で音割れ
 
 @bot.command()   
