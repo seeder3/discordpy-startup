@@ -52,7 +52,7 @@ async def textage(ctx, arg):
             t[1] = '0'
         else:
             t = s[2:6]
-    code.append(''.join(t))
+        code.append(''.join(t))
     await ctx.send('https://textage.cc/score/index.html?r211B000_' + (''.join(code)))
 
 @bot.command()
