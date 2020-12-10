@@ -9,11 +9,11 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 # 任意のチャンネルで挨拶する非同期関数を定義
 async def greet():
-    channel = client.get_channel(784788831253037077)
+    channel = bot.get_channel(784788831253037077)
     await channel.send('Bot reloaded complete.')
 
 # bot起動時に実行されるイベントハンドラを定義
-@client.event
+@bot.event
 async def on_ready():
     await greet() # 挨拶する非同期関数を実行
 
