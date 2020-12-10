@@ -40,8 +40,15 @@ async def mahjong(ctx):
     await ctx.send('https://game.mahjongsoul.com/')
 
 @bot.command()
-async def textage(ctx):
-    await ctx.send('https://textage.cc/score/index.html?a011B000')
+async def textage(ctx, arg):
+    code = [] # 各文字のutf-16文字コードを入れる配列
+    string = list(arg) # 文字を取得 
+
+    for i in range(len(string)):
+        s = list((hex(ord(string[i]))))
+        t = s[2:6]
+        code.append(''.join(t))
+    await ctx.send('https://textage.cc/score/index.html?r211B000_'+(''.join(code)))
 
 @bot.command()
 async def chimpo(ctx):
