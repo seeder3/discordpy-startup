@@ -20,10 +20,10 @@ async def command(ctx):
 @bot.command()
 async def russia(ctx):
     a = random.random()
-    if(a => 0.03):
+    if(a >= 0.03):
         await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
     else:
-        await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   #3%で音割れ
+        await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # 3%で音割れ
 
 @bot.command()
 async def mahjong(ctx):
