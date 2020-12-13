@@ -58,5 +58,9 @@ async def textage(ctx, arg):
 @bot.command()
 async def chimpo(ctx):
     await ctx.send('https://www.youtube.com/watch?v=0g3U4yUktvs')
+    
+@bot.command()
+async def fuck(ctx):
+    await ctx.send(':middle_finger:')
 
 bot.run(token)
