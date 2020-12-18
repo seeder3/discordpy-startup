@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord.ext import tasks
 import random
 import os
 import traceback
@@ -51,18 +52,16 @@ async def russia(ctx):
     else:
         await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # 3%で音割れ
 
-# 60秒に一回ループ
-@tasks.loop(seconds=60)
+# 1時間に一回ループ
+@tasks.loop(hours=1)
 async def time_check():
     now = datetime.datetime.today()  # 現在時刻を取得
     if((now.day == 29) and (now.hour == 15)):
         channel = bot.get_channel(784788831253037077)
         await channel.send('音割れフェス開始! 期間中は/russiaでの音割れ出現確率2倍!(29日15時~月変更)')
-        await asyncio.sleep(30)
     if((now.day == 1) and (now.hour == 0)):
         channel = bot.get_channel(784788831253037077)
         await channel.send('音割れフェス終了')
-        await asyncio.sleep(30)
 
 @bot.command()
 async def mahjong(ctx):
