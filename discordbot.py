@@ -11,7 +11,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def greet():
     channel = bot.get_channel(784788831253037077)
     await channel.send('Bot reloaded complete.')
-    
+
 # russiaコマンドで用いる日付判定関数
 def otoware_fes():
     now = datetime.datetime.today()  # コマンド呼び出し時点での日時を取得
@@ -74,7 +74,7 @@ async def textage(ctx, arg):
 @bot.command()
 async def chimpo(ctx):
     await ctx.send('https://www.youtube.com/watch?v=0g3U4yUktvs')
-    
+
 @bot.command()
 async def fuck(ctx):
     await ctx.send(':middle_finger:')
