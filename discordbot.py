@@ -2,6 +2,7 @@ from discord.ext import commands
 import random
 import os
 import traceback
+import datetime
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -10,6 +11,16 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def greet():
     channel = bot.get_channel(784788831253037077)
     await channel.send('Bot reloaded complete.')
+    
+# russiaコマンドで用いる日付判定関数
+def otoware_fes():
+    now = datetime.datetime.today()  # コマンド呼び出し時点での日時を取得
+    if((now.day == 29) and (now.hour >= 15)):  # 各月29日の15時以降でfesモードon
+        return True
+    elif(30 <= now.day <= 31):  # 各月31日まで行う
+        return True
+    else:   # それ以外の日ではoff
+        return False
 
 # bot起動時に実行されるイベントハンドラを定義
 @bot.event
@@ -29,8 +40,13 @@ async def command(ctx):
 
 @bot.command()
 async def russia(ctx):
+    if(otoware_fes()):
+        B = 0.06
+    else:
+        B = 0.03
+
     a = random.random()
-    if(a >= 0.03):
+    if(a >= B):
         await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
     else:
         await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # 3%で音割れ
