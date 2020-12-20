@@ -93,7 +93,7 @@ async def fuck(ctx):
 
 @bot.command()
 async def anamei(ctx):
-    await ctx.send(' _\n_ \n_ \n _\n _\n_ \n_ \n _\n_ \n _\n_ \n_ \n_ \n _\n_ \n_ \n')
+    await ctx.send('　＿\n＿　\n＿　\n　＿\n　＿\n＿　\n＿　\n　＿\n＿　\n　＿\n＿　\n＿　\n＿　\n　＿\n＿　\n＿　')
 
 time_check.start()
 
