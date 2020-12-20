@@ -50,7 +50,7 @@ async def russia(ctx):
     if(a >= B):
         await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
     else:
-        await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # 3%で音割れ
+        await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # (B)%で音割れ
 
 # 1時間に一回ループ
 @tasks.loop(hours=1)
@@ -90,6 +90,10 @@ async def chimpo(ctx):
 @bot.command()
 async def fuck(ctx):
     await ctx.send(':middle_finger:')
+
+@bot.command()
+async def anamei(ctx):
+    await ctx.send(' _\n_ \n_ \n _\n _\n_ \n_ \n _\n_ \n _\n_ \n_ \n_ \n _\n_ \n_ \n')
 
 time_check.start()
 
