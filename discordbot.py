@@ -41,17 +41,20 @@ async def command(ctx):
     await ctx.send('/russia -> ロシア国歌\n/mahjong ->雀魂\n/textage keyword -> textage検索\n/chimpo->おちんぽ')
 
 @bot.command()
-async def russia(ctx):
-    if(otoware_fes()):
-        B = 0.06
+async def russia(ctx, number = 1):
+    if(number > 10):
+        await ctx.send('1度に10回までしか回せません')
     else:
-        B = 0.03
-
-    a = random.random()
-    if(a >= B):
-        await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
-    else:
-        await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # (B)%で音割れ
+        if(otoware_fes()):
+            B = 0.06
+        else:
+            B = 0.03
+        for i in range(number):
+            A = random.random()
+            if(A >= B):
+                await ctx.send('https://www.youtube.com/watch?v=a0g1MTsYZSE')
+            else:
+                await ctx.send('https://www.youtube.com/watch?v=KOBMxU164Oc')   # (B)%で音割れ
 
 # 1分に一回ループ
 @tasks.loop(minutes=1)
