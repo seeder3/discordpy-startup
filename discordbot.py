@@ -88,6 +88,10 @@ async def textage(ctx, arg):
             t = s[2:6]
         code.append(''.join(t))
     await ctx.send('https://textage.cc/score/index.html?r211B000_' + (''.join(code)))
+    
+@bot.command()
+async def lv12(ctx):
+    await ctx.send('https://sp12.iidx.app/sheets/2533-6500/clear?reverse_sheet=true')
 
 @bot.command()
 async def chimpo(ctx):
