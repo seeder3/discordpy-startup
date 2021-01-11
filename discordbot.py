@@ -41,7 +41,7 @@ async def command(ctx):
     await ctx.send('/russia -> ロシア国歌\n/mahjong ->雀魂\n/textage keyword -> textage検索\n/chimpo->おちんぽ')
 
 @bot.command()
-async def russia(ctx, number = 1):
+async def russia(ctx, number=1):
     if(number > 10):
         await ctx.send('1度に10回までしか回せません')
     else:
