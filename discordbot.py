@@ -94,8 +94,11 @@ async def lv11(ctx):
     await ctx.send('https://docs.google.com/spreadsheets/d/1e7gdUmBk3zUGSxVGC--8p6w2TIWMLBcLzOcmWoeOx6Y/edit#gid=411493762')
 
 @bot.command()
-async def lv12(ctx):
-    await ctx.send('https://sp12.iidx.app/sheets/2533-6500/clear?reverse_sheet=true')
+async def lv12(ctx, id = message.author.id):
+    if(id == 379913769800826890)
+        await ctx.send('https://sp12.iidx.app/sheets/9282-4798/clear?reverse_sheet=true')
+    else
+        await ctx.send('https://sp12.iidx.app/sheets/2533-6500/clear?reverse_sheet=true')
 
 @bot.command()
 async def chimpo(ctx):
