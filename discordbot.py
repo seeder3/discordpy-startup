@@ -74,20 +74,23 @@ async def mahjong(ctx):
     await ctx.send('https://game.mahjongsoul.com/')
 
 @bot.command()
-async def textage(ctx, arg):
-    code = []   # 各文字のutf-16文字コードを入れる配列
-    string = list(arg)  # 文字を取得
+async def textage(ctx, arg = ''):
+    if not arg:
+        await ctx.send('https://textage.cc/score/index.html?a011B000')
+    else:
+        code = []   # 各文字のutf-16文字コードを入れる配列
+        string = list(arg)  # 文字を取得
 
-    for i in range(len(string)):
-        s = list((hex(ord(string[i]))))
-        print(s)
-        if(len(s) <= 4):
-            t = s[0:6]
-            t[1] = '0'
-        else:
-            t = s[2:6]
-        code.append(''.join(t))
-    await ctx.send('https://textage.cc/score/index.html?r211B000_' + (''.join(code)))
+        for i in range(len(string)):
+            s = list((hex(ord(string[i]))))
+            print(s)
+            if(len(s) <= 4):
+                t = s[0:6]
+                t[1] = '0'
+            else:
+                t = s[2:6]
+            code.append(''.join(t))
+        await ctx.send('https://textage.cc/score/index.html?r211B000_' + (''.join(code)))
 
 @bot.command()
 async def lv11(ctx):
