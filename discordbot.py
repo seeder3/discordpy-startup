@@ -98,7 +98,7 @@ async def lv12(ctx):
     id = message.author.id
     if(id == 379913769800826890):
         await ctx.send('https://sp12.iidx.app/sheets/9282-4798/clear?reverse_sheet=true')
-    else
+    else:
         await ctx.send('https://sp12.iidx.app/sheets/2533-6500/clear?reverse_sheet=true')
 
 @bot.command()
