@@ -74,7 +74,7 @@ async def mahjong(ctx):
     await ctx.send('https://game.mahjongsoul.com/')
 
 @bot.command()
-async def textage(ctx, arg = ''):
+async def textage(ctx, arg=''):
     if not arg:
         await ctx.send('https://textage.cc/score/index.html?a011B000')
     else:
