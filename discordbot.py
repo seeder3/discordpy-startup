@@ -68,6 +68,10 @@ async def time_check():
         channel = bot.get_channel(784788831253037077)
         await channel.send('音割れフェス終了')
         await asyncio.sleep(hours=1)
+    if((now.day == 8) and (now.hour == 16)):
+        channel = bot.get_channel(784788831253037077)
+        await channel.send('毎月8日はINFINITASの日!(ログインBIT5倍,FREEチケット×1)')
+        await asyncio.sleep(hours=1)
 
 @bot.command()
 async def mahjong(ctx):
