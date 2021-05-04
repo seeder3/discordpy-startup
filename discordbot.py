@@ -119,6 +119,10 @@ async def fuck(ctx):
 @bot.command()
 async def anamei(ctx):
     await ctx.send('.　＿\n＿　\n＿　\n　＿\n　＿\n＿　\n＿　\n　＿\n＿　\n　＿\n＿　\n＿　\n＿　\n　＿\n＿　\n＿　')
+    
+@bot.command()
+async def geri(ctx):
+    await ctx.send('下痢の時は地力が1段階上昇するという民間伝承。参考動画:https://youtu.be/oRZqB8TUTNc')
 
 time_check.start()
 
