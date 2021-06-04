@@ -124,6 +124,10 @@ async def anamei(ctx):
 async def geri(ctx):
     await ctx.send('下痢の時は地力が1段階上昇するという民間伝承。\n参考動画:https://youtu.be/oRZqB8TUTNc')
 
+@bot.command()
+async def possession(ctx):
+    await ctx.send('https://www.youtube.com/watch?v=QPnPf1Qdfps')
+
 time_check.start()
 
 bot.run(token)
