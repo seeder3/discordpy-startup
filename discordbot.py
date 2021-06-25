@@ -130,7 +130,7 @@ async def possession(ctx):
 
 @bot.command()
 async def bachibachi(ctx):
-    await ctx.send('https://youtu.be/TUjihJCAZvk')
+    await ctx.send('ゴンゴゴゴン・・・(THE LOVE PLUG) バチッ！　ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛！ バチャァン！　ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛ア゛！(スロー)\nhttps://youtu.be/TUjihJCAZvk')
 
 time_check.start()
 
