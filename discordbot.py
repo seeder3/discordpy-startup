@@ -128,6 +128,10 @@ async def geri(ctx):
 async def possession(ctx):
     await ctx.send('https://www.youtube.com/watch?v=QPnPf1Qdfps')
 
+@bot.command()
+async def bachibachi(ctx):
+    await ctx.send('https://youtu.be/TUjihJCAZvk')
+
 time_check.start()
 
 bot.run(token)
